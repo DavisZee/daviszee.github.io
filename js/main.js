@@ -13,7 +13,7 @@ const observer = new IntersectionObserver((entries) => {
   document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
 
 
-  // Dropdown toggle
+// Dropdown toggle
 const dropdownToggle = document.querySelector('.dropdown-toggle');
 const dropdownMenu = document.querySelector('.dropdown-menu');
 
