@@ -29,7 +29,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+  flex-wrap: wrap; /* allows responsiveness on smaller screens */
   gap: 2rem;
   max-width: 1000px;
   margin: 0 auto;
@@ -71,7 +71,7 @@ body {
   transform: scale(1.2);
 }
 
-/* Additional styling (add your flair) */
+/* Additional styling (adds flair) */
 h2 {
   font-size: 2rem;
   margin-bottom: 20px;
@@ -139,7 +139,7 @@ html {
   color: #fff;
 }
 
-/* --- Dropdown --- */
+/* --- Dropdown menu --- */
 .dropdown {
   position: relative;
 }
@@ -189,3 +189,187 @@ html {
 .dropdown-menu.open {
   display: block;
 }
+
+/* ---------Styles for Alpine Trip Forcaster Page (weather finder)---------*/
+html {
+    height: 100%;
+    overflow: auto;
+  }
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: black;
+    background-image: url("../assets/not_my_photo_web.jpg");
+    background-size: cover;
+    min-height: 100%;
+    overflow: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .card {
+    background-color: rgba(128, 128, 128, 0.8);
+    color: white;
+    padding: 2em;
+    border-radius: 20px;
+    margin: 1em;
+    text-align: center;
+    height: auto;
+    width: 550px;
+    overflow: auto;
+  }
+  
+
+  .card label {
+    display: flex;
+    flex: 1;
+  }
+  
+  .card .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card .col-sm-6 {
+    flex-basis: calc(50% - 1em);
+    margin: 0.5em;
+  }
+
+
+  input#search-bar,
+  input#coordinate-bar {
+    border-radius: 5px;
+    background: lightgray;
+    width: 90%;
+    max-width: 450px;
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+  }
+  
+  
+  .display {
+    background-color: rgba(128, 128, 128, 0.8);
+    color: white;
+    padding: 2em;
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    width: 100%;
+  }
+  
+  table#weatherTable {
+    border: 1px solid white;
+    border-collapse: collapse;
+    background-color: rgba(210, 210, 210, 0.8);
+    width: 100%;
+  }
+  
+  thead#tableHead {
+    border: 3px solid white;
+    border-collapse: collapse;
+    background-color: rgba(120, 120, 120, 0.8);
+  }
+  
+  td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+  }
+
+  button {
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: cornflowerblue;
+    color: #fff;
+    border-width: 0;
+  }
+  button#search-btn {
+    height: 35px;
+    margin-left: 15px;
+  }
+  button#email-btn {
+    height: 35px;
+  }
+  button#share-btn {
+    height: 40px;
+    width: 100;
+  }
+  
+  button#update-btn {
+    float: right;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .card-left {
+    background-color: rgba(128, 128, 128, 0.8);
+    color: white;
+    padding: 2em;
+    border-radius: 20px;
+    max-width: auto;
+    margin: 1em;
+    text-align: left;
+    width: 550px;
+    overflow: auto;
+  }
+  
+  form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+  }
+  
+  textarea {
+    height: 150px;
+    resize: none;
+  }
+  
+  button[type="button"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  div#centered-item {
+    text-align: center;
+    padding: 50px;
+  }
+  
