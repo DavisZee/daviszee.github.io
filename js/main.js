@@ -11,3 +11,18 @@ const observer = new IntersectionObserver((entries) => {
   });
   
   document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+
+
+  // Dropdown toggle
+const dropdownToggle = document.querySelector('.dropdown-toggle');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+
+dropdownToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  dropdownMenu.classList.toggle('open');
+});
+
+// Close when clicking anywhere else
+document.addEventListener('click', () => {
+  dropdownMenu.classList.remove('open');
+});
