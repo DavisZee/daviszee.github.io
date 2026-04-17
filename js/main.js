@@ -13,16 +13,17 @@ const observer = new IntersectionObserver((entries) => {
   document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
 
 
-// Dropdown toggle
+// Dropdown toggle — only run if elements exist on this page
 const dropdownToggle = document.querySelector('.dropdown-toggle');
 const dropdownMenu = document.querySelector('.dropdown-menu');
 
-dropdownToggle.addEventListener('click', (e) => {
-  e.stopPropagation();
-  dropdownMenu.classList.toggle('open');
-});
+if (dropdownToggle && dropdownMenu) {
+  dropdownToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdownMenu.classList.toggle('open');
+  });
 
-// Close when clicking anywhere else
-document.addEventListener('click', () => {
-  dropdownMenu.classList.remove('open');
-});
+  document.addEventListener('click', () => {
+    dropdownMenu.classList.remove('open');
+  });
+}
