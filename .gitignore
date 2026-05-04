@@ -1,0 +1,12 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets/Environment
+.env
+*.local
+
+# Dependencies (if you use npm/yarn)
+node_modules/
+dist/
+build/
