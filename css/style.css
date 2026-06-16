@@ -239,7 +239,7 @@ body {
   padding: 0;
   overflow-y: auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   opacity: 0;
   pointer-events: none;
   transform: translateX(24px);
@@ -261,6 +261,8 @@ body {
   padding: 4rem 3.5rem;
   max-width: 520px;
   width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 /* ============================================================
