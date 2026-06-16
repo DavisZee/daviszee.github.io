@@ -3,77 +3,244 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Davis Zhong</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <title>One-Page Orbit Design — Davis Zhong</title>
+  <meta name="description" content="Full-stack developer. Orbit to explore." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Figtree:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-    <!-- Nav Bar -->
-    <nav class="navbar">
-        <div class="nav-logo">Davis Zhong</div>
-        <ul class="nav-links">
-            <li class="dropdown">
-                <button class="dropdown-toggle">Pages ▾</button>
-                <ul class="dropdown-menu">
-                    <li><a href="alpine_trip_forcaster.html">Trip Forcaster</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+  <div class="app" role="main">
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="intro">
-            <h1><strong>Davis Zhong</strong></h1>
-            <h2>Student / Software Developer</h2>
+    <!-- LEFT: ORBIT PANEL -->
+    <div class="orbit-panel" aria-label="Navigation orbit">
+      <div class="orbit-ring" id="orbit-ring" role="navigation" aria-label="Portfolio sections">
+
+        <!-- Center avatar -->
+        <div class="orbit-center" aria-hidden="true">
+          <div class="avatar">AR</div>
+          <div class="avatar-ring ring-1"></div>
+          <div class="avatar-ring ring-2"></div>
+          <div class="avatar-ring ring-3"></div>
         </div>
-            <div class="hero-content">
-                <div class="profile-card">
-                    <img class="profile-image" src="assets/images/profile.jpg" alt="Profile Photo" style="width: 300px;">
+
+        <!-- Orbit nodes — JS positions these -->
+        <button class="orbit-node active" data-section="intro" aria-label="Intro section" aria-pressed="true">
+          <span class="node-dot"></span>
+          <span class="node-label">Intro</span>
+        </button>
+
+        <button class="orbit-node" data-section="work" aria-label="Work section" aria-pressed="false">
+          <span class="node-dot"></span>
+          <span class="node-label">Work</span>
+        </button>
+
+        <button class="orbit-node" data-section="about" aria-label="About section" aria-pressed="false">
+          <span class="node-dot"></span>
+          <span class="node-label">Projects</span>
+        </button>
+
+        <button class="orbit-node" data-section="contact" aria-label="Contact section" aria-pressed="false">
+          <span class="node-dot"></span>
+          <span class="node-label">Contact</span>
+        </button>
+
+      </div>
+
+      <!-- Bottom credit -->
+      <div class="orbit-footer" aria-hidden="true">
+        <span>Davis Zhong</span>
+      </div>
+    </div>
+
+    <!-- RIGHT: CONTENT PANEL -->
+    <div class="content-panel" id="content-panel">
+
+      <!-- INTRO -->
+      <section class="content-section active" id="section-intro" aria-label="Introduction" tabindex="-1">
+        <div class="section-inner">
+          <p class="eyebrow">Graduate Student - Software Developer - Robotics Coach</p>
+          <h1 class="section-heading">Davis Zhong</h1>
+          <p class="section-body">
+            I've worked at startups, coached robotics teams, conducted academic research. I care about the gap between "it works" and "it's excellent."
+          </p>
+          <div class="intro-stats">
+            <div class="stat">
+              <span class="stat-num">3</span>
+              <span class="stat-label">years exp.</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">#</span>
+              <span class="stat-label">stats 2</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">#</span>
+              <span class="stat-label">stat 3</span>
+            </div>
+          </div>
+          <button class="cta-btn" data-nav="work">View my work →</button>
+          <button class="cta-btn" data-nav="work">View my projects →</button>
+        </div>
+      </section>
+
+      <!-- WORK -->
+      <section class="content-section" id="section-work" aria-label="Work" tabindex="-1">
+        <div class="section-inner">
+          <p class="eyebrow">Selected work</p>
+          <h2 class="section-heading">Projects</h2>
+
+          <div class="project-list">
+
+            <article class="project-item">
+              <div class="project-header">
+                <div>
+                  <h3 class="project-name">Lattice</h3>
+                  <span class="project-stack">React · Node · PostgreSQL</span>
                 </div>
-            <div class="about">
-                <h2>About</h2>
-                <p>[stuffs and things]</p>
-            </div>
+                <span class="project-year">2024</span>
+              </div>
+              <p class="project-desc">Real-time collaboration platform. 12k DAU. 60% load-time reduction through edge caching.</p>
+              <div class="project-links">
+                <a href="#" class="link" onclick="return false;">Live site ↗</a>
+                <a href="#" class="link" onclick="return false;">GitHub ↗</a>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-header">
+                <div>
+                  <h3 class="project-name">Prism</h3>
+                  <span class="project-stack">TypeScript · GraphQL · Redis</span>
+                </div>
+                <span class="project-year">2024</span>
+              </div>
+              <p class="project-desc">Design token pipeline: Figma → codebase, automated. 200+ components across 3 enterprise teams.</p>
+              <div class="project-links">
+                <a href="#" class="link" onclick="return false;">Live site ↗</a>
+                <a href="#" class="link" onclick="return false;">GitHub ↗</a>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-header">
+                <div>
+                  <h3 class="project-name">Void</h3>
+                  <span class="project-stack">Rust · WebAssembly · Svelte</span>
+                </div>
+                <span class="project-year">2023</span>
+              </div>
+              <p class="project-desc">Browser-native markdown editor compiled to WASM. 10ms render on 50k-word docs. Zero server.</p>
+              <div class="project-links">
+                <a href="#" class="link" onclick="return false;">Live site ↗</a>
+                <a href="#" class="link" onclick="return false;">GitHub ↗</a>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-header">
+                <div>
+                  <h3 class="project-name">Relay</h3>
+                  <span class="project-stack">Go · gRPC · Kubernetes</span>
+                </div>
+                <span class="project-year">2023</span>
+              </div>
+              <p class="project-desc">Event-streaming middleware. 2M events/day, p99 latency under 4ms.</p>
+              <div class="project-links">
+                <a href="#" class="link" onclick="return false;">Live site ↗</a>
+                <a href="#" class="link" onclick="return false;">GitHub ↗</a>
+              </div>
+            </article>
+
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Connect Section -->
-    <section class="connect fade-in">
-        <h2>Connect With Me</h2>
-        <div class="social-icons">
-            <div class="icon-card">
-                <a href="https://github.com/DavisZee" target="_blank">
-                    <img src="./assets/icons/github.svg" alt="GitHub">
-                </a>
+      <!-- ABOUT -->
+      <section class="content-section" id="section-about" aria-label="About" tabindex="-1">
+        <div class="section-inner">
+          <p class="eyebrow">About me</p>
+          <h2 class="section-heading">Who I am</h2>
+          <p class="section-body">
+            Started coding at 16, building things nobody asked for. Now I build things people actually use. I've led engineering at two startups, contributed to OSS, and I'm still as curious as I was at the beginning.
+          </p>
+          <p class="section-body">
+            Outside the terminal: long-distance cycling, bad chess, good coffee.
+          </p>
+
+          <div class="skills-block">
+            <div class="skill-row">
+              <span class="skill-label">Languages</span>
+              <div class="skill-pills">
+                <span class="pill">TypeScript</span>
+                <span class="pill">Rust</span>
+                <span class="pill">Go</span>
+                <span class="pill">Python</span>
+              </div>
             </div>
-            
-            <div class="icon-card">
-                <a href="https://www.linkedin.com/in/davis-zhong" target="_blank">
-                    <img src="./assets/icons/linkedin.svg" alt="LinkedIn">
-                </a>
+            <div class="skill-row">
+              <span class="skill-label">Frontend</span>
+              <div class="skill-pills">
+                <span class="pill">React</span>
+                <span class="pill">Svelte</span>
+                <span class="pill">WebAssembly</span>
+              </div>
             </div>
+            <div class="skill-row">
+              <span class="skill-label">Backend / Infra</span>
+              <div class="skill-pills">
+                <span class="pill">Node</span>
+                <span class="pill">gRPC</span>
+                <span class="pill">Kubernetes</span>
+                <span class="pill">PostgreSQL</span>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Experiences Section -->
-    <section class="experience fade-in">
-        <h2>Experience</h2>
-        <p>[experiences]</p>
-    </section>
+      <!-- CONTACT -->
+      <section class="content-section" id="section-contact" aria-label="Contact" tabindex="-1">
+        <div class="section-inner">
+          <p class="eyebrow">Get in touch</p>
+          <h2 class="section-heading">Let's talk.</h2>
+          <p class="section-body">
+            Open to coop, internship, contract, and full-time roles. Usually respond within 24 hours.
+          </p>
 
-    <!-- Technologies Section -->
-    <section class="technologies fade-in">
-        <h2>Technologies I've Worked With</h2>
-        <p>[tech and frameworks]</p>
-    </section>
+          <div class="contact-links">
+            <a href="mailto:hello@daviszhong.dev" class="contact-item">
+              <span class="contact-icon" aria-hidden="true">✉</span>
+              <div>
+                <span class="contact-label">Email</span>
+                <span class="contact-value">zhongdavis2001@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="contact-item">
+              <span class="contact-icon" aria-hidden="true">⌥</span>
+              <div>
+                <span class="contact-label">GitHub</span>
+                <span class="contact-value">github.com/DavisZee</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-item">
+              <span class="contact-icon" aria-hidden="true">◈</span>
+              <div>
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">linkedin.com/in/davis-zhong</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
 
-    <!-- Projects Section -->
-    <section class="projects fade-in">
-        <h2>Ongoing Projects</h2>
-        <p>[Projects]</p>
-    </section>
+    </div><!-- /content-panel -->
 
-    <script src="js/main.js"></script>
-    </body>
-    </html>
+  </div><!-- /app -->
+
+  <!-- Mobile nav fallback (injected via JS if needed) -->
+
+  <script src="js/main.js"></script>
+</body>
+</html>
