@@ -153,7 +153,7 @@
     const sections = [
       { id: 'intro',   label: 'intro' },
       { id: 'work',    label: 'work' },
-      { id: 'about',   label: 'about' },
+      { id: 'projects',   label: 'projects' },
       { id: 'contact', label: 'contact' },
     ];
 
